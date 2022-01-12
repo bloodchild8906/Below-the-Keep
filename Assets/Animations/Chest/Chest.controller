@@ -6,7 +6,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Green_Dungeo_Tileset_175 (1)
+  m_Name: Chest
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: Open

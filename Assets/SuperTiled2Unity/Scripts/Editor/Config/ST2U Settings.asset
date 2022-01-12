@@ -59,3 +59,5 @@ MonoBehaviour:
     m_Prefab: {fileID: 5764394691856618867, guid: 5d61fae807eb62545be1681c61f55fac, type: 3}
   - m_TypeName: Lamp
     m_Prefab: {fileID: 7225659142822588280, guid: d6ef32bddddf5b143b7923728ce1637d, type: 3}
+  - m_TypeName: Torch
+    m_Prefab: {fileID: 6510169202024760614, guid: 74ebb1ecc9ca58a4ab1d43d2275c0005, type: 3}

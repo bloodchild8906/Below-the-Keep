@@ -1,20 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="500" height="500" tilewidth="16" tileheight="16" infinite="0" nextlayerid="13" nextobjectid="16">
+<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="500" height="500" tilewidth="16" tileheight="16" infinite="0" nextlayerid="14" nextobjectid="38">
  <tileset firstgid="1" source="../Tilesets/Assets.tsx"/>
  <tileset firstgid="323" source="../Tilesets/Green_Dungeo_Tileset.tsx"/>
  <tileset firstgid="931" source="../Tilesets/env_objects.tsx"/>
  <tileset firstgid="1955" source="../Tilesets/environment.tsx"/>
  <tileset firstgid="2645" source="../Tilesets/anim_lights.tsx"/>
  <objectgroup id="12" name="Object Layer 1">
-  <object id="2" name="Torch" type="Lamp" x="207.818" y="624.03" width="16.3333" height="1.09091"/>
-  <object id="3" name="Torch" type="Lamp" x="390.33" y="623.667" width="17.3333" height="1.51515"/>
-  <object id="4" name="Torch" type="Lamp" x="291.503" y="624" width="16.3333" height="1"/>
-  <object id="5" name="Torch" type="Lamp" x="438.667" y="624" width="17.3333" height="1.15148"/>
-  <object id="6" name="Torch" type="Lamp" x="525.497" y="624" width="17.3333" height="0.939361"/>
-  <object id="7" name="Torch" type="Lamp" x="591.103" y="624" width="17.3333" height="0.969664"/>
-  <object id="8" name="Torch" type="Lamp" x="660.379" y="543.629" width="4.8333" height="4.46966"/>
-  <object id="9" name="Torch" type="Lamp" x="774.333" y="544.015" width="3.8333" height="4.21966"/>
+  <object id="2" name="Lamp" type="Lamp" x="207.818" y="624.03" width="16.3333" height="1.09091"/>
+  <object id="3" name="Lamp" type="Lamp" x="390.33" y="623.667" width="17.3333" height="1.51515"/>
+  <object id="4" name="Lamp" type="Lamp" x="291.503" y="624" width="16.3333" height="1"/>
+  <object id="5" name="Lamp" type="Lamp" x="438.667" y="624" width="17.3333" height="1.15148"/>
+  <object id="6" name="Lamp" type="Lamp" x="525.497" y="624" width="17.3333" height="0.939361"/>
+  <object id="7" name="Lamp" type="Lamp" x="591.103" y="624" width="17.3333" height="0.969664"/>
+  <object id="8" name="Lamp" type="Lamp" x="660.379" y="543.629" width="4.8333" height="4.46966"/>
+  <object id="9" name="Lamp" type="Lamp" x="774.333" y="544.015" width="3.8333" height="4.21966"/>
   <object id="15" name="Chest" type="Chest" x="712.767" y="543.964" width="2.14205" height="2.11858"/>
+  <object id="16" name="Lamp" type="Lamp" x="1078.38" y="383.807" width="3.8333" height="4.21966"/>
+  <object id="17" name="Lamp" type="Lamp" x="1010.08" y="384.14" width="3.8333" height="4.21966"/>
+  <object id="18" name="Lamp" type="Lamp" x="928" y="624" width="3.8333" height="4.21966"/>
+  <object id="19" name="Lamp" type="Lamp" x="1280" y="624" width="3.8333" height="4.21966"/>
+  <object id="20" name="Lamp" type="Lamp" x="834.083" y="623.89" width="3.8333" height="4.21966"/>
+  <object id="21" name="Lamp" type="Lamp" x="1008" y="624" width="3.8333" height="4.21966"/>
+  <object id="22" name="Lamp" type="Lamp" x="1085.58" y="623.64" width="3.8333" height="4.21966"/>
+  <object id="23" name="Lamp" type="Lamp" x="1168" y="624" width="3.8333" height="4.21966"/>
+  <object id="24" name="Lamp" type="Lamp" x="1305.33" y="303.89" width="3.8333" height="4.21966"/>
+  <object id="25" name="Lamp" type="Lamp" x="1395.08" y="304.39" width="3.8333" height="4.21966"/>
+  <object id="26" name="Lamp" type="Lamp" x="1479.58" y="303.89" width="3.8333" height="4.21966"/>
+  <object id="27" name="Torch" type="Torch" x="870.667" y="428.333" width="12.6667" height="12.3333"/>
+  <object id="28" name="Torch" type="Torch" x="1195" y="389.833" width="12.6667" height="12.3333"/>
+  <object id="29" name="Torch" type="Torch" x="1671" y="239.167" width="12.6667" height="12.3333"/>
+  <object id="30" name="Torch" type="Torch" x="1669.67" y="383.167" width="12.6667" height="12.3333"/>
+  <object id="31" name="Torch" type="Torch" x="1671" y="543.167" width="12.6667" height="12.3333"/>
+  <object id="32" name="Torch" type="Torch" x="1669.67" y="685.167" width="12.6667" height="12.3333"/>
+  <object id="34" name="Lamp" type="Lamp" x="1512.42" y="1583.56" width="3.8333" height="4.21966"/>
+  <object id="35" name="Lamp" type="Lamp" x="1373.42" y="1583.89" width="3.8333" height="4.21966"/>
+  <object id="36" name="Lamp" type="Lamp" x="1210.42" y="1582.89" width="3.8333" height="4.21966"/>
+  <object id="37" name="Lamp" type="Lamp" x="1039.75" y="1583.56" width="3.8333" height="4.21966"/>
  </objectgroup>
  <layer id="8" name="bg" width="500" height="500">
   <data encoding="csv">
