@@ -1,3 +1,4 @@
+using Data.Models;
 using Player.Config;
 using System;
 using System.Collections;
@@ -12,6 +13,8 @@ namespace Player.FiniteStateMachine.States.Base
         protected PlayerController PlayerController { get; private set; }
         protected PlayerData PlayerData { get; private set; }
         protected StateMachine StateMachine { get; private set; }
+        public StateDataModel States { get; private set; }
+
         protected Animator Animator { get; private set; }
         protected Transform Transform { get; private set; }
         protected float StartTime { get; private set; }
@@ -26,6 +29,7 @@ namespace Player.FiniteStateMachine.States.Base
             StateMachine = PlayerController.StateMachine;
             Animator = PlayerController.Animator;
             Transform = PlayerController.Transform;
+            States = PlayerController.States;
             _animationParameter = animationParameter;
         }
         public virtual void Enter()
