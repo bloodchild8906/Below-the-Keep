@@ -1,0 +1,26 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+namespace #NAMESPACE#
+{
+    public class #SCRIPTNAME#
+    {
+        #region Variables
+
+        #endregion
+
+        #region Constructor
+
+        public #SCRIPTNAME#()
+        {
+
+        }
+
+        #endregion
+
+        #region Methods
+
+        #endregion
+    }
+}
