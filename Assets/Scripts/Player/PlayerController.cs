@@ -1,31 +1,38 @@
-using System.Collections;
-using System.Collections.Generic;
+using Player.Config;
+using Player.FiniteStateMachine;
 using UnityEngine;
 
 namespace Player
 {
     public class PlayerController : MonoBehaviour
     {
-        #region Variables
+        public PlayerData playerData;
 
-        #endregion
+        public StateMachine StateMachine { get; private set; }
+        public Animator Animator { get; private set; }
+        public Transform Transform { get; private set; }
 
-        #region Unity Methods
-
-        public void Start()
+        private void Awake()
         {
-        
+            StateMachine = new StateMachine();
+            CacheComponents();
+            InitaliseStates();
         }
-
-        public void Update()
+        private void Start()
         {
-        
+            
         }
+        private void Update() => StateMachine.CurrentState.LogicUpdate();
+        private void FixedUpdate() => StateMachine.CurrentState.PhysicsUpdate();
 
-        #endregion
+        private void CacheComponents()
+        {
+            Animator = GetComponent<Animator>();
+            Transform= GetComponent<Transform>();
+        }
+        private void InitaliseStates()
+        {
 
-        #region Methods
-
-        #endregion
+        }
     }
 }
