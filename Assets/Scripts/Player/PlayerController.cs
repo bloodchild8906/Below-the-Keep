@@ -8,17 +8,31 @@ namespace Player
     {
         public PlayerData playerData;
 
-        private StateMachine _stateMachine;
+        public StateMachine StateMachine { get; private set; }
+        public Animator Animator { get; private set; }
+        public Transform Transform { get; private set; }
 
         private void Awake()
         {
-            _stateMachine = new StateMachine();
+            StateMachine = new StateMachine();
+            CacheComponents();
+            InitaliseStates();
         }
         private void Start()
         {
             
         }
-        private void Update() => _stateMachine.CurrentState.PhysicsUpdate();
-        private void FixedUpdate() => _stateMachine.CurrentState.LogicUpdate();
+        private void Update() => StateMachine.CurrentState.LogicUpdate();
+        private void FixedUpdate() => StateMachine.CurrentState.PhysicsUpdate();
+
+        private void CacheComponents()
+        {
+            Animator = GetComponent<Animator>();
+            Transform= GetComponent<Transform>();
+        }
+        private void InitaliseStates()
+        {
+
+        }
     }
 }
