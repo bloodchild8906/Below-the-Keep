@@ -1,12 +1,10 @@
-using PlayerController.FiniteStateMachine.Base;
-using PlayerController.FiniteStateMachine.DataModel;
+using Player.FiniteStateMachine.States.Base;
 
 namespace #NAMESPACE#
 {
-    public class #SCRIPTNAME#:PlayerState
+    public class #SCRIPTNAME#:BasePlayerState
     {
-        public #SCRIPTNAME#(IDataModel model, string animationBoolParameterName)
-            : base(model, animationBoolParameterName)
+        public #SCRIPTNAME#(PlayerController playerController, string parameterName) : base(playerController, parameterName)
         {
         }
 

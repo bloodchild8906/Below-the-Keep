@@ -47,7 +47,7 @@ namespace Player.FiniteStateMachine.States.Base
         {
             DoChecks();
         }
-        public virtual void DoChecks()
+        protected virtual void DoChecks()
         {
 
         }
