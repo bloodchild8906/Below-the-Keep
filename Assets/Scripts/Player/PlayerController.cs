@@ -14,6 +14,7 @@ namespace Player
         public Animator Animator { get; private set; }
         public Transform Transform { get; private set; }
         public StateDataModel States { get; private set; }
+        public InputManager Input { get; set; }
 
         private void Awake()
         {
@@ -32,6 +33,7 @@ namespace Player
         {
             Animator = GetComponent<Animator>();
             Transform= GetComponent<Transform>();
+            Input = GetComponent<InputManager>();
         }
     }
 }
