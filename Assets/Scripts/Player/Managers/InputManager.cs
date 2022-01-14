@@ -5,8 +5,8 @@ using UnityEngine.InputSystem;
 public class InputManager : MonoBehaviour
 {
     public Vector2 RawMovementInput { get; private set; }
-    public int NormInputX { get; private set; }
-    public int NormInputY { get; private set; }
+    public int X { get; private set; }
+    public int Y { get; private set; }
     public bool JumpInput { get; private set; }
     public bool JumpInputStop { get; private set; }
     [SerializeField]
@@ -24,8 +24,8 @@ public class InputManager : MonoBehaviour
     public void OnMoveInput(InputAction.CallbackContext context)
     {
         RawMovementInput = context.ReadValue<Vector2>();
-        NormInputX = Mathf.RoundToInt(RawMovementInput.x);
-        NormInputY = Mathf.RoundToInt(RawMovementInput.y);
+        X = Mathf.RoundToInt(RawMovementInput.x);
+        Y = Mathf.RoundToInt(RawMovementInput.y);
     }
 
     public void OnJumpInput(InputAction.CallbackContext context)

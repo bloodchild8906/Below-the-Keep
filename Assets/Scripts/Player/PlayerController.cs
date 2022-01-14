@@ -19,8 +19,8 @@ namespace Player
         private void Awake()
         {
             StateMachine = new StateMachine();
-            CacheComponents();
             States = new StateDataModel(this);
+            CacheComponents();
         }
         private void Start()
         {
