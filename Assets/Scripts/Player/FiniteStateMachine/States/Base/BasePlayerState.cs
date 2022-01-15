@@ -1,3 +1,5 @@
+using Core;
+using Data.Models;
 using Player.Config;
 using System;
 using System.Collections;
@@ -10,11 +12,20 @@ namespace Player.FiniteStateMachine.States.Base
     {
         #region protected properties
         protected PlayerController PlayerController { get; private set; }
-        protected PlayerData PlayerData { get; private set; }
-        protected StateMachine StateMachine { get; private set; }
-        protected Animator Animator { get; private set; }
-        protected Transform Transform { get; private set; }
+
         protected float StartTime { get; private set; }
+
+        protected Animator Animator => PlayerController.Animator;
+        protected StateDataModel States => PlayerController.States;
+        protected StateMachine StateMachine => PlayerController.StateMachine;
+        protected PlayerData Data => PlayerController.playerData;
+        protected Movement Movement => PlayerController.Movement;
+        protected Checks Checks => PlayerController.Checks;
+        protected InputManager Input => PlayerController.Input;
+
+        protected int InputX { get; private set; }
+        protected int InputY { get; private set; }
+
         #endregion
 
         private string _animationParameter;
@@ -22,10 +33,6 @@ namespace Player.FiniteStateMachine.States.Base
         protected BasePlayerState(PlayerController playerController, string animationParameter)
         {
             PlayerController = playerController;
-            PlayerData = PlayerController.playerData;
-            StateMachine = PlayerController.StateMachine;
-            Animator = PlayerController.Animator;
-            Transform = PlayerController.Transform;
             _animationParameter = animationParameter;
         }
         public virtual void Enter()
@@ -41,7 +48,8 @@ namespace Player.FiniteStateMachine.States.Base
         }
         public virtual void LogicUpdate()
         {
-
+            InputX = Input.X;
+            InputY = Input.Y;
         }
         public virtual void PhysicsUpdate()
         {
