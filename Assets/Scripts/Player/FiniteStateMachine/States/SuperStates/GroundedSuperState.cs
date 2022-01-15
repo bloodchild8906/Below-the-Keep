@@ -21,6 +21,10 @@ namespace Player.FiniteStateMachine.States.SuperStates
         public override void LogicUpdate()
         {
             base.LogicUpdate();
+            if (!Checks.IsGrounded)
+            {
+                //change to airborne state
+            }
         }
 
         public override void PhysicsUpdate()

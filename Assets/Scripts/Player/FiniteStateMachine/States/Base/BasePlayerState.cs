@@ -1,3 +1,4 @@
+using Core;
 using Data.Models;
 using Player.Config;
 using System;
@@ -17,10 +18,14 @@ namespace Player.FiniteStateMachine.States.Base
         protected Animator Animator => PlayerController.Animator;
         protected StateDataModel States => PlayerController.States;
         protected StateMachine StateMachine => PlayerController.StateMachine;
+        protected PlayerData Data => PlayerController.playerData;
+        protected Movement Movement => PlayerController.Movement;
+        protected Checks Checks => PlayerController.Checks;
         protected InputManager Input => PlayerController.Input;
 
         protected int InputX { get; private set; }
         protected int InputY { get; private set; }
+
         #endregion
 
         private string _animationParameter;

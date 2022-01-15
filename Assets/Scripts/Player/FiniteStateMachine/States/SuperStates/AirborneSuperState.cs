@@ -1,17 +1,16 @@
-using Player.FiniteStateMachine.States.SuperStates;
+using Player.FiniteStateMachine.States.Base;
 
-namespace Player.FiniteStateMachine.States.SubStates.Grounded
+namespace Player.FiniteStateMachine.States.SuperStates
 {
-    public class IdleSubState:GroundedSuperState
+    public class AirborneSuperState:BasePlayerState
     {
-        public IdleSubState(PlayerController playerController, string parameterName) : base(playerController, parameterName)
+        public AirborneSuperState(PlayerController playerController, string parameterName) : base(playerController, parameterName)
         {
         }
 
         public override void Enter()
         {
             base.Enter();
-            Movement.SetVelocity_X(0);
         }
 
         public override void Exit()
@@ -22,10 +21,6 @@ namespace Player.FiniteStateMachine.States.SubStates.Grounded
         public override void LogicUpdate()
         {
             base.LogicUpdate();
-            if (InputX != 0)
-            {
-                StateMachine.ChangeState(PlayerController.States.Move);
-            }
         }
 
         public override void PhysicsUpdate()
