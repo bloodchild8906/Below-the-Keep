@@ -19,6 +19,10 @@ namespace Player
 
         [ShowInInspector, ReadOnly]
         public bool IsGounded { get; set; }
+        
+        [ShowInInspector, ReadOnly]
+        public bool IsWallContact { get; set; }
+
 
 
         public StateMachine StateMachine { get; private set; }
@@ -46,6 +50,7 @@ namespace Player
         private void Update()
         {
             IsGounded = Checks.IsGrounded;
+            IsWallContact = Checks.WallContact;
             Movement.CurrentVelocity = Rigidbody.velocity;
             StateMachine.CurrentState.LogicUpdate();
         }

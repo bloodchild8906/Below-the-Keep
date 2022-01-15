@@ -18,7 +18,7 @@ namespace Core
         #region Wall Check
 		private Vector2 _wallCheck => _playerController.wallCheck.position;
         private LayerMask _wallCheckLayer => _playerController.playerData.wallCheckLayer;
-        private float _wallCheckRadius => _playerController.playerData.groundCheckLayer;
+        private float _wallCheckRadius => _playerController.playerData.wallCheckRadius;
         #endregion
         
         public Checks(PlayerController playerController) => _playerController = playerController;

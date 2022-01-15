@@ -14,5 +14,8 @@ namespace Player.Config
 		public string jump="Airborne";
 		public string airborne="Airborne";
         public string yVelocity="Y_Velocity";
+        public string wallSlide="WallSlide";
+        public string wallClimb="WallClimb";
+        public string wallGrab="WallGrab";
     }
 }
