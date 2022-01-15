@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Player.Config
 {
-	[CreateAssetMenu(fileName = "PlayerData", menuName = "PlayerData"),InlineEditor(Expanded = false)]
+	[CreateAssetMenu(fileName = "PlayerData", menuName = "Data/Player/PlayerData"),InlineEditor(Expanded = false)]
 	public class PlayerData : ScriptableObject
 	{
 		[ShowInInspector, TabGroup("Movement")]
@@ -23,5 +23,8 @@ namespace Player.Config
 		public float wallCheckRadius;
 		[ShowInInspector, TabGroup("Checks")]
 		public LayerMask wallCheckLayer;
+
+		[ShowInInspector, TabGroup("Animations")]
+		public PlayerAnimations animationParameters;
 	}
 }
