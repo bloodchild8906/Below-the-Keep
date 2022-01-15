@@ -27,6 +27,9 @@ namespace Player.FiniteStateMachine.States.Base
         protected int InputY { get; private set; }
         protected bool JumpInput { get; private set; }
         protected bool JumpStop { get; private set; }
+        protected bool WallGrab { get; private set; }
+
+
         protected bool AnimationComplete { get; private set; }
 
         #endregion
@@ -56,6 +59,7 @@ namespace Player.FiniteStateMachine.States.Base
             InputY = Input.Y;
             JumpInput = Input.JumpInput;
             JumpStop = Input.JumpInputStop;
+            WallGrab = Input.GrabInput;
         }
         public virtual void PhysicsUpdate()
         {

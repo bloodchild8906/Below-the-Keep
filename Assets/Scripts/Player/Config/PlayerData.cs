@@ -30,6 +30,9 @@ namespace Player.Config
 		[TabGroup("Checks")]
 		public LayerMask wallCheckLayer;
 
+		[TabGroup("Wall Contact")]
+		public float wallSlideVelocity = 3f;
+
 		[TabGroup("Animations")]
 		public PlayerAnimations animationParameters;
     }
