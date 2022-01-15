@@ -1,0 +1,130 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "E:/UnityProjects/BeyondTheGate/Assets/Tiled/Maps/DemoMap.tmx",
+    "expandedProjectPaths": [
+        "E:/UnityProjects/BeyondTheGate/Assets/Tiled",
+        "E:/UnityProjects/BeyondTheGate/Assets/Tiled/Tilesets",
+        "E:/UnityProjects/BeyondTheGate/Assets/Tiled/Maps"
+    ],
+    "file.lastUsedOpenFilter": "All Files (*)",
+    "fileStates": {
+        "E:/UnityProjects/BeyondTheGate/Assets/Tiled/Maps/DemoMap.tmx": {
+            "scale": 1.5,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 191.33333333333331,
+                "y": 350.6666666666667
+            }
+        },
+        "E:/UnityProjects/BeyondTheGate/Assets/Tiled/Tilesets/Green_Dungeo_Tileset.tsx": {
+            "scaleInDock": 1.5,
+            "scaleInEditor": 2
+        },
+        "E:/UnityProjects/BeyondTheGate/Assets/Tiled/Tilesets/env_objects.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 2
+        },
+        "E:/UnityProjects/BeyondTheGate/Assets/Tiled/Tilesets/env_objects_far.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "E:/UnityProjects/BeyondTheGate/Assets/Tiled/Tilesets/ground.tsx": {
+            "scaleInDock": 2,
+            "scaleInEditor": 3
+        },
+        "E:/UnityProjects/BeyondTheGate/Assets/Tiled/Tilesets/walls.tsx": {
+            "scaleInDock": 2,
+            "scaleInEditor": 1
+        },
+        "E:/UnityProjects/BeyondTheGate/Assets/Tiled/Tilesets/walls_far.tsx": {
+            "scaleInDock": 2,
+            "scaleInEditor": 1
+        },
+        "E:/UnityProjects/BeyondTheGate/Assets/Tiled/Tilesets/walls_side_top.tsx": {
+            "scaleInDock": 2,
+            "scaleInEditor": 3
+        },
+        "E:/UnityProjects/BeyondTheGate/Assets/Tiled/Tilesets/walls_side_top_far.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Maps/Toria.tmx": {
+            "scale": 0.220703125,
+            "selectedLayer": 5,
+            "viewCenter": {
+                "x": 3996.3185840707965,
+                "y": 3996.3185840707965
+            }
+        },
+        "Tilesets/Assets.tsx": {
+            "scaleInDock": 1.5,
+            "scaleInEditor": 2
+        },
+        "Tilesets/Green_Dungeo_Tileset.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 2
+        },
+        "Tilesets/anim_light2.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Tilesets/anim_light3.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Tilesets/anim_lights.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Tilesets/env_objects.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Tilesets/env_objects_far.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Tilesets/environment.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Tilesets/wood_env.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        }
+    },
+    "last.imagePath": "E:/UnityProjects/Below the Keep/Assets/Game Assets/Environment",
+    "map.height": 500,
+    "map.lastUsedFormat": "tmx",
+    "map.tileHeight": 16,
+    "map.tileWidth": 16,
+    "map.width": 500,
+    "openFiles": [
+        "E:/UnityProjects/BeyondTheGate/Assets/Tiled/Maps/DemoMap.tmx",
+        "E:/UnityProjects/BeyondTheGate/Assets/Tiled/Tilesets/Green_Dungeo_Tileset.tsx",
+        "E:/UnityProjects/BeyondTheGate/Assets/Tiled/Tilesets/walls.tsx"
+    ],
+    "project": "Below The Keep.tiled-project",
+    "recentFiles": [
+        "E:/UnityProjects/BeyondTheGate/Assets/Tiled/Tilesets/walls.tsx",
+        "E:/UnityProjects/BeyondTheGate/Assets/Tiled/Tilesets/Green_Dungeo_Tileset.tsx",
+        "E:/UnityProjects/BeyondTheGate/Assets/Tiled/Maps/DemoMap.tmx",
+        "Tilesets/Green_Dungeo_Tileset.tsx",
+        "Tilesets/wood_env.tsx",
+        "Tilesets/environment.tsx",
+        "Tilesets/env_objects_far.tsx",
+        "Tilesets/env_objects.tsx",
+        "Tilesets/anim_light3.tsx",
+        "Tilesets/anim_light2.tsx",
+        "Tilesets/anim_lights.tsx",
+        "Tilesets/Assets.tsx"
+    ],
+    "tileset.lastUsedFormat": "tsx",
+    "tileset.tileSize": {
+        "height": 16,
+        "width": 16
+    }
+}
