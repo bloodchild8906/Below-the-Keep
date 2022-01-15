@@ -27,6 +27,7 @@ namespace Player.FiniteStateMachine.States.Base
         protected int InputY { get; private set; }
         protected bool JumpInput { get; private set; }
         protected bool JumpStop { get; private set; }
+        protected bool AnimationComplete { get; private set; }
 
         #endregion
 
@@ -42,6 +43,7 @@ namespace Player.FiniteStateMachine.States.Base
             DoChecks();
             Animator.SetBool(_animationParameter, true);
             StartTime = Time.time;
+            AnimationComplete = false;
 
         }
         public virtual void Exit()
@@ -63,7 +65,12 @@ namespace Player.FiniteStateMachine.States.Base
         {
 
         }
+        public virtual void AnimationTrigger()
+        {
 
+        }
+
+        public virtual void AnimationCompleteTrigger() => AnimationComplete = true;
 
     }
 }

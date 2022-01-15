@@ -11,6 +11,7 @@ namespace Player.FiniteStateMachine.States.SubStates.Grounded
         public override void Enter()
         {
             base.Enter();
+            Movement.SetVelocity_X(0f);
         }
 
         public override void Exit()
@@ -21,6 +22,14 @@ namespace Player.FiniteStateMachine.States.SubStates.Grounded
         public override void LogicUpdate()
         {
             base.LogicUpdate();
+            if (InputX != 0)
+            {
+                StateMachine.ChangeState(States.Move);
+            }
+            else if (AnimationComplete)
+            {
+                StateMachine.ChangeState(States.Idle);
+            }
         }
 
         public override void PhysicsUpdate()

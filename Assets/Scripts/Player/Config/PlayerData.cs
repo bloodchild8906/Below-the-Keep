@@ -8,23 +8,29 @@ namespace Player.Config
 	[CreateAssetMenu(fileName = "PlayerData", menuName = "Data/Player/PlayerData"),InlineEditor(Expanded = false)]
 	public class PlayerData : ScriptableObject
 	{
-		[ShowInInspector, TabGroup("Movement")]
+		[TabGroup("Movement")]
 		public float moveSpeed;
 
 
-		[ShowInInspector, TabGroup("Jumping")]
+		[TabGroup("Jumping")]
 		public float jumpStrength;
+		[TabGroup("Jumping")]
+		public int maxJumps=2;
+		[TabGroup("Jumping")]
+		public float variableJumpModifier = 0.5f;
+		[TabGroup("Jumping")]
+        public float coyoteTime = 0.2f;
 
-		[ShowInInspector, TabGroup("Checks")]
+		[TabGroup("Checks")]
 		public float groundCheckRadius;
-		[ShowInInspector, TabGroup("Checks")]
+		[TabGroup("Checks")]
 		public LayerMask groundCheckLayer;
-		[ShowInInspector, TabGroup("Checks")]
+		[TabGroup("Checks")]
 		public float wallCheckRadius;
-		[ShowInInspector, TabGroup("Checks")]
+		[TabGroup("Checks")]
 		public LayerMask wallCheckLayer;
 
-		[ShowInInspector, TabGroup("Animations")]
+		[TabGroup("Animations")]
 		public PlayerAnimations animationParameters;
-	}
+    }
 }

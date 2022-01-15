@@ -11,6 +11,7 @@ namespace Player.FiniteStateMachine.States.SuperStates
         public override void Enter()
         {
             base.Enter();
+            States.Jump.ResetJumps();
         }
 
         public override void Exit()
@@ -21,14 +22,15 @@ namespace Player.FiniteStateMachine.States.SuperStates
         public override void LogicUpdate()
         {
             base.LogicUpdate();
-            if (JumpInput)
+            if (JumpInput && Checks.IsGrounded && States.Jump.CanJump)
             {
                 Input.UseJumpInput();
                 StateMachine.ChangeState(States.Jump);
             }
             if (!Checks.IsGrounded)
             {
-                //change to airborne state
+                States.Airborne.SetCoyoteTime();
+                StateMachine.ChangeState(States.Airborne);
             }
         }
 

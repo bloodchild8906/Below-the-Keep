@@ -17,3 +17,4 @@ MonoBehaviour:
   land: Land
   jump: Airborne
   airborne: Airborne
+  yVelocity: Y_Velocity

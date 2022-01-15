@@ -13,5 +13,6 @@ namespace Player.Config
 		public string land="Land";
 		public string jump="Airborne";
 		public string airborne="Airborne";
-	}
+        public string yVelocity="Y_Velocity";
+    }
 }
