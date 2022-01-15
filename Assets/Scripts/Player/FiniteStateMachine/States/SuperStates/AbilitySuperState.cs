@@ -2,16 +2,17 @@ using Player.FiniteStateMachine.States.Base;
 
 namespace Player.FiniteStateMachine.States.SuperStates
 {
-    public class GroundedSuperState:BasePlayerState
+    public class AbilitySuperState : BasePlayerState
     {
-        public GroundedSuperState(PlayerController playerController, string parameterName) : base(playerController, parameterName)
+        protected bool IsComplete { get; set; }
+        public AbilitySuperState(PlayerController playerController, string parameterName) : base(playerController, parameterName)
         {
         }
 
         public override void Enter()
         {
             base.Enter();
-            States.Jump.ResetJumps();
+            IsComplete = false;
         }
 
         public override void Exit()
@@ -22,15 +23,16 @@ namespace Player.FiniteStateMachine.States.SuperStates
         public override void LogicUpdate()
         {
             base.LogicUpdate();
-            if (JumpInput && Checks.IsGrounded && States.Jump.CanJump)
+            if (IsComplete)
             {
-                Input.UseJumpInput();
-                StateMachine.ChangeState(States.Jump);
-            }
-            if (!Checks.IsGrounded)
-            {
-                States.Airborne.SetCoyoteTime();
-                StateMachine.ChangeState(States.Airborne);
+                if (Checks.IsGrounded && Movement.CurrentVelocity.y < 0.1f)
+                {
+                    StateMachine.ChangeState(States.Idle);
+                }
+                else
+                {
+                    StateMachine.ChangeState(States.Airborne);
+                }
             }
         }
 

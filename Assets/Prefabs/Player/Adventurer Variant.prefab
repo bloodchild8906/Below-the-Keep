@@ -170,6 +170,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Adventurer Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 6246070620066855573, guid: 8b6a70a1282fa7b4fafd40f649fbc17c, type: 3}
+      propertyPath: m_Size.x
+      value: 0.67603505
+      objectReference: {fileID: 0}
+    - target: {fileID: 6246070620066855573, guid: 8b6a70a1282fa7b4fafd40f649fbc17c, type: 3}
+      propertyPath: m_Size.y
+      value: 0.6197815
+      objectReference: {fileID: 0}
+    - target: {fileID: 6246070620066855573, guid: 8b6a70a1282fa7b4fafd40f649fbc17c, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.0003695488
+      objectReference: {fileID: 0}
+    - target: {fileID: 6246070620066855573, guid: 8b6a70a1282fa7b4fafd40f649fbc17c, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.15845108
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b6a70a1282fa7b4fafd40f649fbc17c, type: 3}
 --- !u!1 &4405203522278660206 stripped

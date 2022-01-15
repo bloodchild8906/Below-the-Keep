@@ -25,6 +25,9 @@ namespace Player.FiniteStateMachine.States.Base
 
         protected int InputX { get; private set; }
         protected int InputY { get; private set; }
+        protected bool JumpInput { get; private set; }
+        protected bool JumpStop { get; private set; }
+        protected bool AnimationComplete { get; private set; }
 
         #endregion
 
@@ -40,6 +43,7 @@ namespace Player.FiniteStateMachine.States.Base
             DoChecks();
             Animator.SetBool(_animationParameter, true);
             StartTime = Time.time;
+            AnimationComplete = false;
 
         }
         public virtual void Exit()
@@ -50,6 +54,8 @@ namespace Player.FiniteStateMachine.States.Base
         {
             InputX = Input.X;
             InputY = Input.Y;
+            JumpInput = Input.JumpInput;
+            JumpStop = Input.JumpInputStop;
         }
         public virtual void PhysicsUpdate()
         {
@@ -59,7 +65,12 @@ namespace Player.FiniteStateMachine.States.Base
         {
 
         }
+        public virtual void AnimationTrigger()
+        {
 
+        }
+
+        public virtual void AnimationCompleteTrigger() => AnimationComplete = true;
 
     }
 }

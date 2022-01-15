@@ -492,10 +492,10 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 1
   serializedVersion: 3
-  m_TransitionDuration: 0.25
+  m_TransitionDuration: 0
   m_TransitionOffset: 0
   m_ExitTime: 0.06250006
-  m_HasExitTime: 1
+  m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
@@ -775,12 +775,6 @@ AnimatorController:
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
   - m_Name: Y_Velocity
-    m_Type: 1
-    m_DefaultFloat: 0
-    m_DefaultInt: 0
-    m_DefaultBool: 0
-    m_Controller: {fileID: 0}
-  - m_Name: X_Velocity
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -1137,32 +1131,16 @@ BlendTree:
   m_Name: Jump Fall Blend
   m_Childs:
   - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: 93e0485d7e9876d448f0bd9e0feaefbb, type: 2}
-    m_Threshold: 0
-    m_Position: {x: 0, y: 7}
-    m_TimeScale: 1
-    m_CycleOffset: 0
-    m_DirectBlendParameter: Y_Velocity
-    m_Mirror: 0
-  - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: 355893040dfbd0140b05078f525f0ac1, type: 2}
-    m_Threshold: 0.13333334
-    m_Position: {x: 0, y: 0}
-    m_TimeScale: 1
-    m_CycleOffset: 0
-    m_DirectBlendParameter: Y_Velocity
-    m_Mirror: 0
-  - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: c07c5157725516b4cbeb83f84fbd31bc, type: 2}
-    m_Threshold: 0.26666668
-    m_Position: {x: 1, y: 7}
+    m_Motion: {fileID: 7400000, guid: d82e6f7b4faed6944922b3cada91ebdf, type: 2}
+    m_Threshold: -1
+    m_Position: {x: 1, y: -1}
     m_TimeScale: 1
     m_CycleOffset: 0
     m_DirectBlendParameter: Y_Velocity
     m_Mirror: 0
   - serializedVersion: 2
     m_Motion: {fileID: 7400000, guid: 1630eaebd5b6bc846a00a466378ee7bc, type: 2}
-    m_Threshold: 0.4
+    m_Threshold: 0
     m_Position: {x: 1, y: 3}
     m_TimeScale: 1
     m_CycleOffset: 0
@@ -1170,35 +1148,27 @@ BlendTree:
     m_Mirror: 0
   - serializedVersion: 2
     m_Motion: {fileID: 7400000, guid: fe557ea881e52f245adee78535b9e75c, type: 2}
-    m_Threshold: 0.53333336
+    m_Threshold: 3
     m_Position: {x: 1, y: 0}
     m_TimeScale: 1
     m_CycleOffset: 0
     m_DirectBlendParameter: Y_Velocity
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: d82e6f7b4faed6944922b3cada91ebdf, type: 2}
-    m_Threshold: 0.6666667
-    m_Position: {x: 0, y: -1}
+    m_Motion: {fileID: 7400000, guid: c07c5157725516b4cbeb83f84fbd31bc, type: 2}
+    m_Threshold: 7
+    m_Position: {x: 1, y: 7}
     m_TimeScale: 1
     m_CycleOffset: 0
     m_DirectBlendParameter: Y_Velocity
     m_Mirror: 0
-  - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: d82e6f7b4faed6944922b3cada91ebdf, type: 2}
-    m_Threshold: 0.8
-    m_Position: {x: 1, y: -1}
-    m_TimeScale: 1
-    m_CycleOffset: 0
-    m_DirectBlendParameter: Y_Velocity
-    m_Mirror: 0
-  m_BlendParameter: X_Velocity
+  m_BlendParameter: Y_Velocity
   m_BlendParameterY: Y_Velocity
-  m_MinThreshold: 0
-  m_MaxThreshold: 0.8
-  m_UseAutomaticThresholds: 1
+  m_MinThreshold: -1
+  m_MaxThreshold: 7
+  m_UseAutomaticThresholds: 0
   m_NormalizedBlendValues: 0
-  m_BlendType: 2
+  m_BlendType: 0
 --- !u!1102 &6175937233332601345
 AnimatorState:
   serializedVersion: 6
@@ -1374,10 +1344,10 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 1
   serializedVersion: 3
-  m_TransitionDuration: 0.25
+  m_TransitionDuration: 0
   m_TransitionOffset: 0
   m_ExitTime: 0
-  m_HasExitTime: 1
+  m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1

@@ -52,6 +52,12 @@ namespace Player
 
         private void FixedUpdate() => StateMachine.CurrentState.PhysicsUpdate();
 
+
+        public void AnimationTrigger() => StateMachine.CurrentState.AnimationTrigger();
+
+        public void AnimationCompleteTrigger() => StateMachine.CurrentState.AnimationCompleteTrigger();
+
+
         private void CacheComponents()
         {
             Animator = GetComponent<Animator>();
