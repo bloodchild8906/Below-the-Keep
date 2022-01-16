@@ -23,7 +23,11 @@ namespace Player.FiniteStateMachine.States.SubStates.WallContact
         {
             base.LogicUpdate();
             if (IsStateComplete) return;
-
+            if (!Checks.LedgeContact)
+            {
+                States.LedgeClimb.SavePosition(PlayerController.Transform.position);
+                StateMachine.ChangeState(States.LedgeClimb);
+            }
             if (InputY>0)
                 Movement.SetVelocity_Y(Data.wallClimbSpeed);
         }

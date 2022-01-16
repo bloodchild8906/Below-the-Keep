@@ -38,6 +38,12 @@ namespace Core
             _rigidbody2D.velocity = _workspace;
             CurrentVelocity = _workspace;
         }
+        public void SetVelocityZero()
+        {
+            _rigidbody2D.velocity = Vector2.zero;
+            CurrentVelocity = Vector2.zero;
+        }
+
         public void Flip(int inputX)
         {
             if (inputX == 0) return;
