@@ -186,6 +186,10 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: 0.15845108
       objectReference: {fileID: 0}
+    - target: {fileID: 6778403279295964085, guid: 8b6a70a1282fa7b4fafd40f649fbc17c, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b6a70a1282fa7b4fafd40f649fbc17c, type: 3}
 --- !u!1 &4405203522278660206 stripped
@@ -206,6 +210,11 @@ Transform:
 --- !u!4 &7599769845840632534 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1818640454265061521, guid: 8b6a70a1282fa7b4fafd40f649fbc17c, type: 3}
+  m_PrefabInstance: {fileID: 8091514646886980167}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &3340382764709378546 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6778403279295964085, guid: 8b6a70a1282fa7b4fafd40f649fbc17c, type: 3}
   m_PrefabInstance: {fileID: 8091514646886980167}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &1648924612414594953
@@ -236,6 +245,7 @@ MonoBehaviour:
   playerData: {fileID: 11400000, guid: d7db4b91c4cfee04182c046be5f3a83f, type: 2}
   groundCheck: {fileID: 7836855141353627510}
   wallCheck: {fileID: 7599769845840632534}
+  ledgeCheck: {fileID: 3340382764709378546}
 --- !u!114 &6053051346222955253
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -333,6 +343,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: b7fd9988-e2b5-4cb8-ade6-a4599fd8a789
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 8fc4785c-69e0-4a80-aaad-8a1112882cb2
+    m_ActionName: Player/Wall Grab[/Keyboard/rightCtrl,/XInputControllerWindows/rightShoulder]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player

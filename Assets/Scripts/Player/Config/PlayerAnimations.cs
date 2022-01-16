@@ -17,5 +17,7 @@ namespace Player.Config
         public string wallSlide="WallSlide";
         public string wallClimb="WallClimb";
         public string wallGrab="WallGrab";
+		public string ledgeClimbState="LedgeClimbState";
+		public string ledgeClimb = "LedgeClimb";
     }
 }
