@@ -22,6 +22,8 @@ namespace Player.FiniteStateMachine.States.SubStates.WallContact
         {
             base.LogicUpdate();
             Movement.SetVelocity_Y(-Data.wallSlideVelocity);
+            if (Checks.IsGrounded && WallGrab)
+                StateMachine.ChangeState(States.WallGrab);
             
         }
 

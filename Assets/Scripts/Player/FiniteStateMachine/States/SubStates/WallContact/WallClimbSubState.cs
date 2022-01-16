@@ -11,6 +11,7 @@ namespace Player.FiniteStateMachine.States.SubStates.WallContact
         public override void Enter()
         {
             base.Enter();
+            
         }
 
         public override void Exit()
@@ -21,6 +22,8 @@ namespace Player.FiniteStateMachine.States.SubStates.WallContact
         public override void LogicUpdate()
         {
             base.LogicUpdate();
+            if(InputY>0)
+                Movement.SetVelocity_Y(Data.wallClimbSpeed);
         }
 
         public override void PhysicsUpdate()
