@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Player.FiniteStateMachine.States.SuperStates
 {
-    public class AirborneSuperState:BasePlayerState
+    public class AirborneSuperState : BasePlayerState
     {
         private bool _isJumping;
         private bool _coyoteTime;
@@ -35,6 +35,10 @@ namespace Player.FiniteStateMachine.States.SuperStates
             else if (States.Jump.CanJump && JumpInput)
             {
                 StateMachine.ChangeState(States.Jump);
+            }
+            else if (Checks.WallContact && InputX == PlayerController.transform.localScale.x&&Movement.CurrentVelocity.y<=0f)
+            {
+                StateMachine.ChangeState(States.WallSlide);
             }
             else
             {
@@ -75,9 +79,9 @@ namespace Player.FiniteStateMachine.States.SuperStates
         private void CheckCoyoteTime()
         {
             if (_coyoteTime && Time.time > StartTime + Data.coyoteTime)
-             {
+            {
                 _coyoteTime = false;
-                  States.Jump.DecreaseJumps();
+                States.Jump.DecreaseJumps();
             }
         }
 

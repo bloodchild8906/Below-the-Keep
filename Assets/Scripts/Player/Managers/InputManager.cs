@@ -9,6 +9,9 @@ public class InputManager : MonoBehaviour
     public int Y { get; private set; }
     public bool JumpInput { get; private set; }
     public bool JumpInputStop { get; private set; }
+
+    public bool GrabInput { get; private set; }
+
     [SerializeField]
     private float inputHoldTime = 0.2f;
 
@@ -43,7 +46,18 @@ public class InputManager : MonoBehaviour
         }
     }
 
-    public void OnGrabInput(InputAction.CallbackContext context) => Expression.Empty();
+    public void OnGrabInput(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            GrabInput = true;
+        }
+
+        if (context.canceled)
+        {
+            GrabInput = false;
+        }
+    }
 
     public void OnDashInput(InputAction.CallbackContext context) => Expression.Empty();
 
