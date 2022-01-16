@@ -31,6 +31,11 @@ namespace Player.FiniteStateMachine.States.SuperStates
             if (Checks.IsGrounded && Movement.CurrentVelocity.y < 0.01f)
             {
                 StateMachine.ChangeState(States.Land);
+            }else if (Checks.WallContact && !Checks.LedgeContact && Movement.CurrentVelocity.y<=0)
+            {
+                States.LedgeClimb.SavePosition(PlayerController.Transform.position);
+
+                StateMachine.ChangeState(States.LedgeClimb);
             }
             else if (JumpInput&&Checks.WallContact)
             {
@@ -79,6 +84,10 @@ namespace Player.FiniteStateMachine.States.SuperStates
         protected override void DoChecks()
         {
             base.DoChecks();
+            if (Checks.WallContact && !Checks.LedgeContact)
+            {
+                States.LedgeClimb.SavePosition(PlayerController.transform.position);
+            }
         }
         public void SetJumping() => _isJumping = true;
         public void SetCoyoteTime() => _coyoteTime = true;

@@ -10,12 +10,10 @@ namespace Player
 {
     public class PlayerController : MonoBehaviour
     {
-        [ShowInInspector]
         public PlayerData playerData;
-        [ShowInInspector]
         public Transform groundCheck;
-        [ShowInInspector]
         public Transform wallCheck;
+        public Transform ledgeCheck;
 
         [ShowInInspector, ReadOnly]
         public bool IsGounded { get; set; }

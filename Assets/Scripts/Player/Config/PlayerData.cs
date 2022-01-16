@@ -44,5 +44,10 @@ namespace Player.Config
 
 		[TabGroup("Animations")]
 		public PlayerAnimations animationParameters;
-    }
+
+		public LayerMask ledgeCheckLayer;
+		public float ledgeCheckDistance = 0.5f;
+		public Vector2 startOffset;
+		public Vector2 endOffset;
+	}
 }
