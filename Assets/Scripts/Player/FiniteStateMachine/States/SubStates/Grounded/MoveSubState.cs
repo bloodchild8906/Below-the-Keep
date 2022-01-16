@@ -23,6 +23,7 @@ namespace Player.FiniteStateMachine.States.SubStates.Grounded
         public override void LogicUpdate()
         {
             base.LogicUpdate();
+            if (IsStateComplete) return;
             if (InputX == 0)
             {
                 StateMachine.ChangeState(States.Idle);

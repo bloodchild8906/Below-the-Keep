@@ -14,6 +14,7 @@ namespace Player.FiniteStateMachine.States.Base
         protected PlayerController PlayerController { get; private set; }
 
         protected float StartTime { get; private set; }
+        protected bool IsStateComplete { get; private set; }
 
         protected Animator Animator => PlayerController.Animator;
         protected StateDataModel States => PlayerController.States;
@@ -47,11 +48,13 @@ namespace Player.FiniteStateMachine.States.Base
             Animator.SetBool(_animationParameter, true);
             StartTime = Time.time;
             AnimationComplete = false;
+            IsStateComplete = false;
 
         }
         public virtual void Exit()
         {
             Animator.SetBool(_animationParameter, false);
+            IsStateComplete = true;
         }
         public virtual void LogicUpdate()
         {

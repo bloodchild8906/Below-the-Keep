@@ -23,6 +23,7 @@ namespace Data.Models
         public WallSlideSubState WallSlide { get; set; }
         public WallClimbSubState WallClimb { get; set; }
         public WallGrabSubState WallGrab { get; set; }
+        public WallJumpSubState WallJump { get; set; }
 
 
 
@@ -40,6 +41,7 @@ namespace Data.Models
             Move = new MoveSubState(_playerController, _animation.move);
             Land = new LandSubState(_playerController, _animation.land);
             Jump = new JumpSubState(_playerController, _animation.jump);
+            WallJump = new WallJumpSubState(_playerController, _animation.jump);
             Airborne = new AirborneSuperState(_playerController, _animation.airborne);
             WallSlide = new WallSlideSubState(_playerController, _animation.wallSlide);
             WallGrab = new WallGrabSubState(_playerController, _animation.wallGrab);
