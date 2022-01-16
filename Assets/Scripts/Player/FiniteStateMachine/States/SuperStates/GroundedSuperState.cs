@@ -32,6 +32,10 @@ namespace Player.FiniteStateMachine.States.SuperStates
                 States.Airborne.SetCoyoteTime();
                 StateMachine.ChangeState(States.Airborne);
             }
+            if (Checks.WallContact && WallGrab)
+            {
+                StateMachine.ChangeState(States.WallGrab);
+            }
         }
 
         public override void PhysicsUpdate()

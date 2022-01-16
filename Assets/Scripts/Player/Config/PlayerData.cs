@@ -32,6 +32,7 @@ namespace Player.Config
 
 		[TabGroup("Wall Contact")]
 		public float wallSlideVelocity = 3f;
+		public float wallClimbSpeed = 1f;
 
 		[TabGroup("Animations")]
 		public PlayerAnimations animationParameters;
