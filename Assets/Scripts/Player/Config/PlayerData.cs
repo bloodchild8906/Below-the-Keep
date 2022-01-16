@@ -21,6 +21,14 @@ namespace Player.Config
 		[TabGroup("Jumping")]
         public float coyoteTime = 0.2f;
 
+		[TabGroup("Wall Jump")]
+		public float walljumpStrength=20;
+		[TabGroup("Wall Jump")]
+		public float WallJumpTime = 0.4f;
+		[TabGroup("Wall Jump")]
+		public Vector2 wallJumpAngle = new Vector2(1,2);
+
+
 		[TabGroup("Checks")]
 		public float groundCheckRadius;
 		[TabGroup("Checks")]

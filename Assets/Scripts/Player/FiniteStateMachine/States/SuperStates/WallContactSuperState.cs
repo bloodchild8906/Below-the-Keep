@@ -21,7 +21,14 @@ namespace Player.FiniteStateMachine.States.SuperStates
         public override void LogicUpdate()
         {
             base.LogicUpdate();
-            if (WallGrab && InputY==0)
+            if (IsStateComplete) return;
+
+            if (JumpInput)
+            {
+                Input.UseJumpInput();
+                StateMachine.ChangeState(States.WallJump);
+            }
+            else if (WallGrab && InputY==0)
             {
                 StateMachine.ChangeState(States.WallGrab);
             }

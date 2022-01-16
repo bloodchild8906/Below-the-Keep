@@ -11,6 +11,8 @@ namespace Player.FiniteStateMachine.States.SubStates.Ability
         public override void Enter()
         {
             base.Enter();
+            if (IsStateComplete) return;
+
             Movement.SetVelocity_Y(Data.jumpStrength);
             IsComplete = true;
             States.Airborne.SetJumping();

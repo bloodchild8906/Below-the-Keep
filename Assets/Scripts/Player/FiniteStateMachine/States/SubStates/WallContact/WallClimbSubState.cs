@@ -22,7 +22,9 @@ namespace Player.FiniteStateMachine.States.SubStates.WallContact
         public override void LogicUpdate()
         {
             base.LogicUpdate();
-            if(InputY>0)
+            if (IsStateComplete) return;
+
+            if (InputY>0)
                 Movement.SetVelocity_Y(Data.wallClimbSpeed);
         }
 

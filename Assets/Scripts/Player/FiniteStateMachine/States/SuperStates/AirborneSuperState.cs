@@ -32,8 +32,14 @@ namespace Player.FiniteStateMachine.States.SuperStates
             {
                 StateMachine.ChangeState(States.Land);
             }
+            else if (JumpInput&&Checks.WallContact)
+            {
+                Input.UseJumpInput();
+                StateMachine.ChangeState(States.WallJump);
+            }
             else if (States.Jump.CanJump && JumpInput)
             {
+                Input.UseJumpInput();
                 StateMachine.ChangeState(States.Jump);
             }
             else if (Checks.WallContact && InputX == PlayerController.transform.localScale.x&&Movement.CurrentVelocity.y<=0f)

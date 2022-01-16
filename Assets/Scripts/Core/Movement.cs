@@ -31,6 +31,13 @@ namespace Core
             _rigidbody2D.velocity = _workspace;
             CurrentVelocity = _workspace;
         }
+        public void SetVelocity(float velocity,Vector2 angle,int direction)
+        {
+            angle.Normalize();
+            _workspace.Set(angle.x*velocity*direction, angle.y*velocity);
+            _rigidbody2D.velocity = _workspace;
+            CurrentVelocity = _workspace;
+        }
         public void Flip(int inputX)
         {
             if (inputX == 0) return;
