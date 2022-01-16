@@ -27,6 +27,8 @@ namespace Player.FiniteStateMachine.States.SubStates.WallContact
         public override void LogicUpdate()
         {
             base.LogicUpdate();
+            if (IsStateComplete) return;
+
             if (InputY > 0)
             {
                 StateMachine.ChangeState(States.WallClimb);
