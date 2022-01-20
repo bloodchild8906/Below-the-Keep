@@ -13,7 +13,9 @@ namespace Player
         public PlayerData playerData;
         public Transform groundCheck;
         public Transform wallCheck;
+        public Transform backWallCheck;
         public Transform ledgeCheck;
+        public Transform directionIndicator;
 
         [ShowInInspector, ReadOnly]
         public bool IsGounded { get; set; }

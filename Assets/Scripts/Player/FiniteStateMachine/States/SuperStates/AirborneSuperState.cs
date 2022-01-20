@@ -28,16 +28,17 @@ namespace Player.FiniteStateMachine.States.SuperStates
             VariableJump();
             CheckCoyoteTime();
 
-            if (Checks.IsGrounded && Movement.CurrentVelocity.y < 0.01f)
+            if (Checks.IsGrounded && Movement.CurrentVelocity.y < 0.01f|| (Checks.IsGrounded && !Checks.WallContact && !Checks.LedgeContact))
             {
                 StateMachine.ChangeState(States.Land);
-            }else if (Checks.WallContact && !Checks.LedgeContact && Movement.CurrentVelocity.y<=0)
+            }
+            else if (Checks.WallContact && !Checks.LedgeContact && Movement.CurrentVelocity.y <= 0 && !Checks.IsGrounded)
             {
                 States.LedgeClimb.SavePosition(PlayerController.Transform.position);
 
                 StateMachine.ChangeState(States.LedgeClimb);
             }
-            else if (JumpInput&&Checks.WallContact)
+            else if (JumpInput && Checks.WallContact)
             {
                 Input.UseJumpInput();
                 StateMachine.ChangeState(States.WallJump);
@@ -47,9 +48,13 @@ namespace Player.FiniteStateMachine.States.SuperStates
                 Input.UseJumpInput();
                 StateMachine.ChangeState(States.Jump);
             }
-            else if (Checks.WallContact && InputX == PlayerController.transform.localScale.x&&Movement.CurrentVelocity.y<=0f)
+            else if (Checks.WallContact && InputX == PlayerController.transform.localScale.x && Movement.CurrentVelocity.y <= 0f)
             {
                 StateMachine.ChangeState(States.WallSlide);
+            }
+            else if (DashInput && Checks.CanDash())
+            {
+                StateMachine.ChangeState(States.Dash);
             }
             else
             {

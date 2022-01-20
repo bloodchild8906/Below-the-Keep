@@ -1,4 +1,6 @@
+using Data.Models;
 using Player;
+using Player.Config;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,7 +12,10 @@ namespace Core
         private PlayerController _playerController;
         
         private int Facing => (int)_playerController.transform.localScale.x;
-        
+
+        private StateDataModel _states => _playerController.States;
+        private PlayerData _data => _playerController.playerData;
+
         #region Ground Check
         private Vector2 _groundCheck => _playerController.groundCheck.position;
         private LayerMask _groundCheckLayer => _playerController.playerData.groundCheckLayer;
@@ -19,6 +24,8 @@ namespace Core
         
         #region Wall Check
 		private Vector2 _wallCheck => _playerController.wallCheck.position;
+        private Vector2 _backWallCheck => _playerController.backWallCheck.position;
+
         private LayerMask _wallCheckLayer => _playerController.playerData.wallCheckLayer;
         private float _wallCheckDistance => _playerController.playerData.wallCheckRadius;
         #endregion
@@ -34,6 +41,7 @@ namespace Core
 
         public bool IsGrounded => Physics2D.OverlapCircle(_groundCheck, _groundCheckRadius, _groundCheckLayer);
         public bool WallContact => Physics2D.Raycast(_wallCheck, Vector2.right * _playerController.Transform.localScale.x, _wallCheckDistance, _wallCheckLayer);
+        public bool BackWallContact => Physics2D.Raycast(_backWallCheck, -(Vector2.right * _playerController.Transform.localScale.x), _wallCheckDistance, _wallCheckLayer);
         public bool LedgeContact => Physics2D.Raycast(_ledgeCheck, Vector2.right*_playerController.Transform.localScale.x,_ledgeCheckDistance, _ledgeCheckLayer);
 
         public Vector2 GetCornerPos()
@@ -45,6 +53,8 @@ namespace Core
             retval.Set(_wallCheck.x + (xhit.distance * Facing),_ledgeCheck.y-yHit.distance);
             return retval;
         }
+
+        public bool CanDash() => _states.Dash.CanDash && Time.time >= _states.Dash.LastDashtime + _data.dashCooldown;
 
     }
 }

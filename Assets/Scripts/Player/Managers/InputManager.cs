@@ -98,7 +98,7 @@ public class InputManager : MonoBehaviour
 
         if (playerInput.currentControlScheme == "Keyboard")
         {
-            RawDashDirectionInput = cam.ScreenToWorldPoint((Vector3)RawDashDirectionInput) - transform.position;
+            RawDashDirectionInput = cam.ScreenToWorldPoint(RawDashDirectionInput) - transform.position;
         }
 
         DashDirectionInput = Vector2Int.RoundToInt(RawDashDirectionInput.normalized);

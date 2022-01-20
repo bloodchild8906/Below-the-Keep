@@ -19,5 +19,6 @@ namespace Player.Config
         public string wallGrab="WallGrab";
 		public string ledgeClimbState="LedgeClimbState";
 		public string ledgeClimb = "LedgeClimb";
-    }
+        public string dash = "Airborne";
+	}
 }

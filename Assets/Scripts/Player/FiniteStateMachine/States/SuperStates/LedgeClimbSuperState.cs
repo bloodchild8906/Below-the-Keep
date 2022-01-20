@@ -28,6 +28,7 @@ namespace Player.FiniteStateMachine.States.SuperStates
 
         public override void Exit()
         {
+            
             base.Exit();
             _isHanging = false;
             if (_isClimbing)

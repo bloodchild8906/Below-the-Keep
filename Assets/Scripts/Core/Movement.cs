@@ -31,10 +31,16 @@ namespace Core
             _rigidbody2D.velocity = _workspace;
             CurrentVelocity = _workspace;
         }
-        public void SetVelocity(float velocity,Vector2 angle,int direction)
+        public void SetVelocity(float velocity, Vector2 angle, int direction)
         {
             angle.Normalize();
-            _workspace.Set(angle.x*velocity*direction, angle.y*velocity);
+            _workspace.Set(angle.x * velocity * direction, angle.y * velocity);
+            _rigidbody2D.velocity = _workspace;
+            CurrentVelocity = _workspace;
+        }
+        public void SetVelocity(float velocity, Vector2 direction)
+        {
+            _workspace = direction * velocity;
             _rigidbody2D.velocity = _workspace;
             CurrentVelocity = _workspace;
         }

@@ -25,6 +25,7 @@ namespace Data.Models
         public WallGrabSubState WallGrab { get; set; }
         public WallJumpSubState WallJump { get; set; }
         public LedgeClimbSuperState LedgeClimb { get; set; }
+        public DashSubState Dash { get; set; }
 
 
 
@@ -48,6 +49,8 @@ namespace Data.Models
             WallGrab = new WallGrabSubState(_playerController, _animation.wallGrab);
             WallClimb = new WallClimbSubState(_playerController, _animation.wallClimb);
             LedgeClimb = new LedgeClimbSuperState(_playerController, _animation.ledgeClimbState);
+            Dash = new DashSubState(_playerController, _animation.dash);
+
         }
     }
 }
