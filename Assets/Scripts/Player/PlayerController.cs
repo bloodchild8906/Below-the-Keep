@@ -17,6 +17,8 @@ namespace Player
         public Transform ledgeCheck;
         public Transform directionIndicator;
 
+        public BoxCollider2D topCollider;
+
         [ShowInInspector, ReadOnly]
         public bool IsGounded { get; set; }
         

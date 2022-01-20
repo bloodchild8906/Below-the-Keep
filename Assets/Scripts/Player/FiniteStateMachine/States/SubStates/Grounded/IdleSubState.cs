@@ -23,9 +23,16 @@ namespace Player.FiniteStateMachine.States.SubStates.Grounded
         {
             base.LogicUpdate();
             if (IsStateComplete) return;
-            if (InputX != 0)
+            if (InputX != 0 && InputY == 0)
             {
                 StateMachine.ChangeState(PlayerController.States.Move);
+            }else if (InputX != 0 && InputY == -1)
+            {
+                StateMachine.ChangeState(PlayerController.States.CrouchMove);
+            }
+            else if (InputX == 0 && InputY == -1)
+            {
+                StateMachine.ChangeState(PlayerController.States.CrouchIdle);
             }
         }
 

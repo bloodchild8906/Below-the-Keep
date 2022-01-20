@@ -90,6 +90,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5577911483090174505, guid: 8b6a70a1282fa7b4fafd40f649fbc17c, type: 3}
   m_PrefabInstance: {fileID: 8091514646886980167}
   m_PrefabAsset: {fileID: 0}
+--- !u!61 &2802458951965679826 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 6246070620066855573, guid: 8b6a70a1282fa7b4fafd40f649fbc17c, type: 3}
+  m_PrefabInstance: {fileID: 8091514646886980167}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7836855141353627510 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2056121419728815409, guid: 8b6a70a1282fa7b4fafd40f649fbc17c, type: 3}
@@ -146,6 +151,7 @@ MonoBehaviour:
   backWallCheck: {fileID: 7750910727094335370}
   ledgeCheck: {fileID: 3340382764709378546}
   directionIndicator: {fileID: 3705831640145891635}
+  topCollider: {fileID: 2802458951965679826}
 --- !u!114 &6053051346222955253
 MonoBehaviour:
   m_ObjectHideFlags: 0

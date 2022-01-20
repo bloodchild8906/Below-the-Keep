@@ -26,6 +26,8 @@ namespace Data.Models
         public WallJumpSubState WallJump { get; set; }
         public LedgeClimbSuperState LedgeClimb { get; set; }
         public DashSubState Dash { get; set; }
+        public CrouchIdleSubState CrouchIdle { get; set; }
+        public CrouchMoveSubState CrouchMove { get; set; }
 
 
 
@@ -50,6 +52,8 @@ namespace Data.Models
             WallClimb = new WallClimbSubState(_playerController, _animation.wallClimb);
             LedgeClimb = new LedgeClimbSuperState(_playerController, _animation.ledgeClimbState);
             Dash = new DashSubState(_playerController, _animation.dash);
+            CrouchIdle = new CrouchIdleSubState(_playerController, _animation.crouchIdle);
+            CrouchMove = new CrouchMoveSubState(_playerController, _animation.crouchMove);
 
         }
     }
