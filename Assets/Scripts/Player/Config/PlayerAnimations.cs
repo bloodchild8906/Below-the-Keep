@@ -20,5 +20,8 @@ namespace Player.Config
 		public string ledgeClimbState="LedgeClimbState";
 		public string ledgeClimb = "LedgeClimb";
         public string dash = "Airborne";
+		public string crouchIdle = "CrouchIdle";
+		public string crouchMove = "CrouchMove";
+
 	}
 }

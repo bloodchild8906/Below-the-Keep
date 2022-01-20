@@ -74,6 +74,10 @@ namespace Player.Config
 		[TabGroup("Dash"),Range(0,360)]
 		public int dashIndicatorAngleOffset = 0;
 
+		[TabGroup("Crouch")]
+		public float crouchMoveSpeed = 0;
+//		[TabGroup("Dash")]
+//		public int dashIndicatorAngleOffset = 0;
 
 
 
