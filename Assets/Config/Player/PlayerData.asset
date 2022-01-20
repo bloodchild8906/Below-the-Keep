@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 7
   jumpStrength: 9
-  maxJumps: 2
+  maxJumps: 10
   variableJumpModifier: 0.5
   coyoteTime: 0.2
   walljumpStrength: 10
@@ -28,7 +28,7 @@ MonoBehaviour:
   wallCheckLayer:
     serializedVersion: 2
     m_Bits: 192
-  wallSlideVelocity: 3
+  wallSlideVelocity: 2
   wallClimbSpeed: 3
   animationParameters: {fileID: 11400000, guid: 87ad49fb7fe7b024289104d0b600f1c8, type: 2}
   ledgeCheckLayer:
@@ -37,3 +37,12 @@ MonoBehaviour:
   ledgeCheckDistance: 0.7
   startOffset: {x: 0.5, y: 0.9}
   endOffset: {x: 0.5, y: 0.5}
+  dashCooldown: 0.5
+  holdTime: 2
+  holdTimeScale: 0.2
+  dashTime: 0.2
+  dashvelocity: 30
+  dashDrag: 10
+  dashEndYMultiplier: 0.2
+  distanceAfterImage: 0.2
+  dashIndicatorAngleOffset: 180

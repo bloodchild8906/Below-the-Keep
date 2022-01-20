@@ -40,14 +40,42 @@ namespace Player.Config
 
 		[TabGroup("Wall Contact")]
 		public float wallSlideVelocity = 3f;
+		[TabGroup("Wall Contact")]
 		public float wallClimbSpeed = 1f;
 
 		[TabGroup("Animations")]
 		public PlayerAnimations animationParameters;
 
+		[TabGroup("Ledge Check")]
 		public LayerMask ledgeCheckLayer;
+		[TabGroup("Ledge Check")]
 		public float ledgeCheckDistance = 0.5f;
+		[TabGroup("Ledge Check")]
 		public Vector2 startOffset;
+		[TabGroup("Ledge Check")]
 		public Vector2 endOffset;
+
+		[TabGroup("Dash")]
+		public float dashCooldown = 2f;
+		[TabGroup("Dash")]
+		public float holdTime = 2f;
+		[TabGroup("Dash")]
+		public float holdTimeScale = 0.2f;
+		[TabGroup("Dash")]
+		public float dashTime = 0.2f;
+		[TabGroup("Dash")]
+		public float dashvelocity = 30f;
+		[TabGroup("Dash")]
+		public float dashDrag = 10f;
+		[TabGroup("Dash")]
+		public float dashEndYMultiplier = 0.2f;
+		[TabGroup("Dash")]
+		public float distanceAfterImage = 0.2f;
+		[TabGroup("Dash"),Range(0,360)]
+		public int dashIndicatorAngleOffset = 0;
+
+
+
+
 	}
 }
