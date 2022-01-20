@@ -13,7 +13,7 @@ namespace Player.FiniteStateMachine.States.Base
         #region protected properties
         protected PlayerController PlayerController { get; private set; }
 
-        protected float StartTime { get; private set; }
+        protected float StartTime { get; set; }
         protected bool IsStateComplete { get; private set; }
 
         protected Animator Animator => PlayerController.Animator;
@@ -26,9 +26,12 @@ namespace Player.FiniteStateMachine.States.Base
 
         protected int InputX { get; private set; }
         protected int InputY { get; private set; }
+        protected Vector2 DashMovementInput { get; private set; }
         protected bool JumpInput { get; private set; }
         protected bool JumpStop { get; private set; }
         protected bool WallGrab { get; private set; }
+        protected bool DashInput { get; private set; }
+        protected bool DashInputStop { get; private set; }
 
 
         protected bool AnimationComplete { get; private set; }
@@ -63,6 +66,9 @@ namespace Player.FiniteStateMachine.States.Base
             JumpInput = Input.JumpInput;
             JumpStop = Input.JumpInputStop;
             WallGrab = Input.GrabInput;
+            DashInput = Input.DashInput;
+            DashInputStop = Input.DashInputStop;
+            DashMovementInput = Input.RawDashDirectionInput;
         }
         public virtual void PhysicsUpdate()
         {

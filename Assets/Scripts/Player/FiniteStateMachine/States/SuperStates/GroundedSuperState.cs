@@ -12,6 +12,7 @@ namespace Player.FiniteStateMachine.States.SuperStates
         {
             base.Enter();
             States.Jump.ResetJumps();
+            States.Dash.ResetDash();
         }
 
         public override void Exit()
@@ -35,6 +36,10 @@ namespace Player.FiniteStateMachine.States.SuperStates
             if (Checks.WallContact && WallGrab)
             {
                 StateMachine.ChangeState(States.WallGrab);
+            }
+            if (DashInput && Checks.CanDash())
+            {
+                StateMachine.ChangeState(States.Dash);
             }
         }
 
